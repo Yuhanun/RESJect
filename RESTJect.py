@@ -36,6 +36,11 @@ class Response:
         Returns a possible List of any type, or a Response object, from index <index_num>.
         Throws IndexError if out of range.
         """
+        if not self.throw:
+            try:
+                self.obj[index_num]
+            except BaseException:
+                return
         if isinstance(self.obj[index_num], list):
             return self.obj[index_num]
         elif isinstance(self.obj[index_num], dict):

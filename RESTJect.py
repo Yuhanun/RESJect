@@ -50,7 +50,7 @@ class Response:
     def __repr__(self):
         """
         String representation in format:
-        <Response at {address} key_count={keycount}>
+        <Response at {address} length={keycount}>
         """
         return f"<Response at {hex(id(self))} length={len(self.obj)}>"
 
